@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RZ Advocacia - Escritório de advocacia especializado em Direito de Saúde com mais de 20 anos de experiência jurídica em Belo Horizonte e todo o Brasil.">
+    <title>RZ Advocacia | Excelência Jurídica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/api/placeholder/32/32" type="image/x-icon">
+    <style>
+
+        /* Estilos para a nova seção Compromisso com a Justiça */
+.compromisso {
+    padding: 5rem 0;
+    background-color: var(--branco);
+    position: relative;
+    overflow: hidden;
+}
+
+.compromisso-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.compromisso-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--preto);
+    position: relative;
+}
+
+.compromisso-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--vermelho);
+}
+
+.compromisso-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.compromisso-valores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.valor-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--cinza-claro);
+    border-radius: 8px;
+    transition: var(--transicao);
+}
+
+.valor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.valor-icon {
+    color: var(--vermelho);
+    flex-shrink: 0;
+}
+
+.valor-texto h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.valor-texto p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.compromisso-image {
+    position: relative;
+    z-index: 1;
+    margin-top: 2rem;
+    max-width: 600px;
+}
+
+.compromisso-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    position: relative;
+}
+
+.compromisso-image::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--vermelho);
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.btn-compromisso {
+    margin-top: 1rem;
+    background-color: var(--preto);
+    border: 2px solid var(--preto);
+    transition: var(--transicao);
+    font-weight: 600;
+}
+
+.btn-compromisso:hover {
+    background-color: var(--vermelho);
+    border-color: var(--vermelho);
+}
+
+/* Ajustes na responsividade não são mais necessários */
+@media (max-width: 992px) {
+    .compromisso-valores {
+        grid-template-columns: 1fr;
+    }
+}
+        /* Estilos para a seção Sobre Nós sem sanfona */
+.sobre-content {
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.sobre-section {
+    margin-bottom: 2.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: var(--cinza-claro);
+}
+
+.sobre-heading {
+    background-color: var(--cinza-claro);
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    position: relative;
+    border-bottom: 2px solid var(--vermelho);
+    font-size: 1.2rem;
+}
+
+.sobre-body {
+    padding: 1.5rem;
+    background-color: var(--branco);
+}
+
+.sobre-body h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--preto);
+}
+
+.sobre-body p {
+    margin-bottom: 1rem;
+}
+
+.sobre-body p:last-child {
+    margin-bottom: 0;
+}
+        :root {
+            --preto: #000000;
+            --branco: #FFFFFF;
+            --vermelho: #CC0000;
+            --cinza-claro: #f8f8f8;
+            --cinza-medio: #e0e0e0;
+            --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transicao: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--preto);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--vermelho);
+            color: var(--branco);
+            font-weight: 600;
+            border-radius: 4px;
+            transition: var(--transicao);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #990000;
+            transform: translateY(-2px);
+            box-shadow: var(--sombra);
+        }
+
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            text-align: center;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--vermelho);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--branco);
+            box-shadow: var(--sombra);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--preto);
+        }
+
+        .logo span {
+            color: var(--vermelho);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            position: relative;
+            transition: var(--transicao);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--vermelho);
+            transition: var(--transicao);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 5rem;
+            background-color: var(--cinza-claro);
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+/* Estilo para logo com bordas arredondadas sem borda sólida */
+.hero-logo {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+    border: none; /* Remove a borda sólida */
+    padding: 0; /* Remove o padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Fundo transparente */
+    transition: var(--transicao);
+}
+
+/* Estilo da imagem da logo com bordas arredondadas */
+.hero-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 16px; /* Aplica bordas arredondadas diretamente na imagem */
+    transition: var(--transicao);
+}
+
+.hero-logo:hover img {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+        /* Vantagens Section */
+        .vantagens {
+            padding: 5rem 0;
+            background-color: var(--branco);
+        }
+
+        .vantagens-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .vantagem-card {
+            background-color: var(--cinza-claro);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: var(--transicao);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .vantagem-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--sombra);
+        }
+
+        .vantagem-icon {
+            margin-bottom: 1.5rem;
+            color: var(--vermelho);
+        }
+
+        .vantagem-card h3 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .vantagem-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Escritório Section */
+        .escritorio {
+            padding: 5rem 0;
+            background-color: var(--cinza-claro);
+        }
+
+        .escritorio-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .escritorio-image {
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: var(--sombra);
+            line-height: 0; /* Remove o espaço gerado pelo line-height */
+            font-size: 0; /* Também ajuda a eliminar espaços indesejados */
+            display: block; /* Garante que a div se comporte como bloco */
+            margin: 0; /* Remove margens */
+            vertical-align: bottom; /* Ajuda a eliminar espaços na parte inferior */
+        }
+
+        .escritorio-image img {
+            width: 100%;
+            height: auto;
+            transition: var(--transicao);
+        }
+
+        .escritorio-content h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .escritorio-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--vermelho);
+        }
+
+        /* Somente para desktop - Manter o estilo padrão */
+        @media (min-width: 769px) {
+            .escritorio-content h2 {
+                text-align: left;
+            }
+            
+            .escritorio-content h2::after {
+                left: 0;
+                transform: none;
+            }
+        }
+
+        .escritorio-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .mapa {
+            margin-top: 2rem;
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            box-shadow: var(--sombra);
+        }
+
+        /* Sobre Section */
+        .sobre {
+            padding: 5rem 0;
+            background-color: var(--branco);
+        }
+
+        .tabs {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .tab {
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .tab-header {
+            background-color: var(--cinza-claro);
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tab-header::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: var(--transicao);
+        }
+
+        .tab.active .tab-header::after {
+            content: '-';
+        }
+
+        .tab-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: var(--branco);
+        }
+
+        .tab.active .tab-content {
+            max-height: 500px;
+        }
+
+        .tab-body {
+            padding: 1.5rem;
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .area-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .area-icon {
+            color: var(--vermelho);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--preto);
+            color: var(--branco);
+            padding: 3rem 0;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--vermelho);
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #222;
+            color: var(--vermelho);
+            transition: var(--transicao);
+        }
+
+        .social-link:hover {
+            background-color: var(--vermelho);
+            color: var(--branco);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            margin-top: 3rem;
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                order: -1;
+                margin-bottom: 2rem;
+            }
+
+            .escritorio-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                position: relative;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--branco);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 1.5rem;
+                transform: translateY(-150%);
+                transition: var(--transicao);
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            /* Alteração 1: Esconder o botão WhatsApp no cabeçalho em mobile */
+            .header-container > .btn-whatsapp {
+                display: none;
+            }
+            
+            /* Alteração 2: Mostrar o botão dentro do menu de navegação apenas em mobile */
+            .nav-menu .btn-whatsapp-mobile {
+                display: flex;
+                margin-top: 1rem;
+            }
+            
+            /* Alteração 3: Reorganização da seção hero em mobile */
+            .hero-mobile-container {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .hero-logo-mobile {
+                order: 3;
+                margin-top: 2rem;
+            }
+            
+            /* Alteração 4: Centralizar o risco sob o título "Nosso Escritório" apenas no mobile */
+            .escritorio-content h2 {
+                text-align: center;
+            }
+            
+            .escritorio-content h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+        /* Esconder o botão do menu de navegação na versão desktop */
+        @media (min-width: 769px) {
+            .nav-menu .btn-whatsapp-mobile {
+                display: none;
+            }
+        }
+
+        /* Animação de Scroll */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Diferentes atrasos para animações em sequência */
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+        .delay-400 { transition-delay: 0.4s; }
+        .delay-500 { transition-delay: 0.5s; }
+
+        /* Parallax Effect */
+        .parallax {
+            position: relative;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300px;
+        }
+
+        .parallax-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: var(--branco);
+        }
+
+        .parallax-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .parallax-subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo"> <span>RZ</span> ADVOCACIA</a>
+            <div class="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link">Início</a></li>
+                    <li><a href="#escritorio" class="nav-link">Escritório</a></li>
+                    <li><a href="#sobre" class="nav-link">Áreas</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                    <!-- Adicionando o botão WhatsApp apenas no menu mobile -->
+                    <li>
+                        <a href="https://wa.me/5531997775577" class="btn btn-whatsapp btn-whatsapp-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                            Fale por WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Botão do cabeçalho - apenas para desktop -->
+            <a href="https://wa.me/5531997775577" class="btn btn-whatsapp">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                Fale por WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container hero-mobile-container">
+            <div class="hero-content">
+                <h1>Justiça com Excelência Jurídica</h1>
+                <p>Comprometidos com resultados eficientes e atendimento personalizado. Nossa equipe de especialistas atua com dedicação e estratégia para defender seus direitos e interesses.</p>
+                <a href="https://wa.me/5531997775577" class="btn btn-whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                    Fale por WhatsApp
+                </a>
+            </div>
+            <div class="hero-image hero-logo-mobile">
+                <div class="hero-logo">
+                    <img src="https://i.imgur.com/nNg03qw.png" alt="Logo RZ Advocacia">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vantagens Section -->
+    <section class="vantagens">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Nossas Vantagens</h2>
+            <div class="vantagens-grid">
+                <div class="vantagem-card animate-on-scroll delay-100">
+                    <div class="vantagem-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>27 Anos de Experiência</h3>
+                    <p>Desde 1998 com atuação no mercado jurídico, com casos bem-sucedidos e clientes satisfeitos.</p>
+                </div>
+                <div class="vantagem-card animate-on-scroll delay-200">
+                    <div class="vantagem-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3>Especialistas em Direito de Saúde</h3>
+                    <p>Equipe altamente especializada em diversas áreas da Advocacia Civil, pronta para atender suas necessidades.</p>
+                </div>
+                <div class="vantagem-card animate-on-scroll delay-300">
+                    <div class="vantagem-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Excelência em todos o trabalho</h3>
+                    <p>Buscamos realizar todo trabalho com excelência e trazer resultados para os nossos clientes.</p>
+                </div>
+                <div class="vantagem-card animate-on-scroll delay-400">
+                    <div class="vantagem-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3>Suporte para os clientes </h3>
+                    <p>Canais de atendimento disponíveis para dúvidas ou emergências.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Nova Seção Compromisso com a Justiça (substituindo a seção Parallax) -->
+<section class="compromisso">
+    <div class="container">
+        <div class="compromisso-container">
+            <div class="compromisso-content">
+                <h2 class="animate-on-scroll">Compromisso com a Justiça</h2>
+                <p class="animate-on-scroll delay-100">Defendemos seus direitos com ética, compromisso e excelência profissional. Nossa missão é garantir que você tenha o melhor suporte jurídico em todos os momentos.</p>
+                <div class="compromisso-valores">
+                    <div class="valor-item animate-on-scroll delay-200">
+                         <div class="valor-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="valor-texto">
+                            <h3>Dedicação</h3>
+                            <p>Foco total na defesa dos seus interesses.</p>
+                        </div>
+                    </div>
+                    <div class="valor-item animate-on-scroll delay-300">
+                        <div class="valor-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="valor-texto">
+                            <h3>Transparência</h3>
+                            <p>Comunicação clara e objetiva durante todo o processo.</p>
+                        </div>
+                    </div>
+                    <div class="valor-item animate-on-scroll delay-400">
+                        <div class="valor-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="valor-texto">
+                            <h3>Eficiência</h3>
+                            <p>Temos resultados concretos com estratégias eficazes.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/5531997775577" class="btn btn-compromisso animate-on-scroll delay-500">Fale com um especialista</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Escritório Section -->
+    <section id="escritorio" class="escritorio">
+        <div class="container">
+            <div class="escritorio-container">
+                <div class="escritorio-image animate-on-scroll">
+                    <img src="https://i.imgur.com/B1QgqBq.png" alt="Escritório RZ Advocacia">
+                </div>
+                <div class="escritorio-content">
+                    <h2 class="animate-on-scroll delay-100">Nosso Escritório</h2>
+                    <p class="animate-on-scroll delay-200">Localizado estrategicamente no coração de Belo Horizonte, nosso escritório conta com instalações modernas e confortáveis para atender nossos clientes com o máximo de qualidade e privacidade.</p>
+                    <p class="animate-on-scroll delay-300">Dispomos de salas de reunião para atender nossos clientes, biblioteca jurídica atualizada e equipe altamente qualificados para oferecer o melhor atendimento em todas as fases do seu processo.</p>
+                    <p class="animate-on-scroll delay-400">Venha nos conhecer e descubra como podemos ajudar na resolução das suas questões jurídicas.</p>
+                </div>
+            </div>
+            <div class="mapa animate-on-scroll delay-200">
+                <iframe 
+                    src="https://maps.google.com/maps?q=Rua%20Ouro%20Preto%20581,%204%C2%BA%20andar%20-%20Belo%20Horizonte/MG&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+   <section id="sobre" class="sobre">
+    <div class="container">
+        <h2 class="section-title">Sobre Nós</h2>
+        <div class="sobre-content">
+            <div class="sobre-section">
+                <h3 class="sobre-heading">História</h3>
+                <div class="sobre-body">
+                    <p>Fundado em 1998, o escritório iniciou suas atividades com foco em Advocacia Civil e Direito da Saúde. Ao longo dos anos, expandimos nossa atuação para diversas áreas do Direito, consolidando nossa excelência no mercado jurídico mineiro.</p>
+
+                </div>
+            </div>
+            <div class="sobre-section">
+                <h3 class="sobre-heading">Missão e Visão</h3>
+                <div class="sobre-body">
+                    <h4>Missão</h4>
+                    <p>Oferecer soluções jurídicas eficientes e personalizadas, defendendo os interesses de nossos clientes com ética, competência e dedicação.</p>
+                    <h4>Visão</h4>
+                    <p>Ser reconhecido como um escritório de advocacia de referência nacional, destacando-se pela excelência na prestação de serviços jurídicos e pela construção de relacionamentos duradouros com nossos clientes.</p>
+                </div>
+            </div>
+            <div class="sobre-section">
+                <h3 class="sobre-heading">Valores</h3>
+                <div class="sobre-body">
+                    <ul>
+                        <li>• <strong>Ética:</strong> Comprometimento com a verdade e a integridade em todas as nossas ações.</li>
+                        <li>• <strong>Excelência:</strong> Busca constante pela qualidade e pelo aprimoramento profissional.</li>
+                        <li>• <strong>Dedicação:</strong> Empenho total na defesa dos interesses de nossos clientes.</li>
+                        <li>• <strong>Responsabilidade:</strong> Compromisso com os resultados e com o impacto de nossas ações.</li>
+                        <li>• <strong>Inovação:</strong> Abertura para novas ideias e soluções criativas.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sobre-section">
+                <h3 class="sobre-heading">Áreas de Atuação</h3>
+                <div class="sobre-body">
+                    <div class="areas-list">
+                        <div class="area-item">
+                            <span class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                </svg>
+                            </span>
+                            Direito Civil
+                        </div>
+                        <div class="area-item">
+                            <span class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </span>
+                            Direito Empresarial
+                        </div>
+                        <div class="area-item">
+                            <span class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                </svg>
+                            </span>
+                            Direito do Trabalho
+                        </div>
+                        <div class="area-item">
+                            <span class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </span>
+                            Direito Imobiliário
+                        </div>
+                        <div class="area-item">
+                            <span class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                                    <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                                </svg>
+                            </span>
+                            Direito Tributário
+                        </div>
+                        <div class="area-item">
+                            <span class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                </svg>
+                            </span>
+                            Direito do Consumidor
+                        </div>
+                        <div class="area-item">
+                            <span class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </span>
+                            Direito de Família
+                        </div>
+                        <div class="area-item">
+                            <span class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                    <polyline points="16 17 21 12 16 7"></polyline>
+                                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                                </svg>
+                            </span>
+                            Direito Sucessório
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">RZ ADVOCACIA</div>
+                <p>Excelência jurídica a serviço dos seus direitos.</p>
+                <p class="copyright-text">© 2025 RZ Advocacia. Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p>Rua Ouro Preto, 581, 4º andar</p>
+                <p>Belo Horizonte - MG</p>
+                <p>CEP: 30.170-040</p>
+                <p>Tel: (31) 99777-5577</p>
+                <p>Email: contato@rzadvocacia.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 RZ Advocacia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                nav.classList.remove('active');
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Tabs
+        const tabs = document.querySelectorAll('.tab');
+        
+        tabs.forEach(tab => {
+            const header = tab.querySelector('.tab-header');
+            
+            header.addEventListener('click', () => {
+                tabs.forEach(t => {
+                    if (t !== tab) {
+                        t.classList.remove('active');
+                    }
+                });
+                
+                tab.classList.toggle('active');
+            });
+        });
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const parallax = document.querySelector('.parallax');
+            const scrollPosition = window.pageYOffset;
+            
+            if (parallax) {
+                parallax.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+            }
+        });
+
+        // Add active class to nav links on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Animação no scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar elementos que já estão visíveis na tela quando a página carrega
+            checkElementsInViewport();
+            
+            // Verificar elementos quando rolar a página
+            window.addEventListener('scroll', function() {
+                checkElementsInViewport();
+            });
+            
+            function checkElementsInViewport() {
+                const animatedElements = document.querySelectorAll('.animate-on-scroll');
+                
+                animatedElements.forEach(function(element) {
+                    if (isElementInViewport(element)) {
+                        element.classList.add('animated');
+                    }
+                });
+            }
+            
+            function isElementInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                
+                // Elemento é considerado visível quando está a 20% da altura da tela
+                return (
+                    rect.top <= windowHeight * 0.8
+                );
+            }
+        });
+    </script>
+</body>
+</html>
